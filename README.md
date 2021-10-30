@@ -4,14 +4,16 @@
 30/10/2021
 
 ### Project Title
-Replace the Project Title
+Post your Work on Github
 
 ### Description
-Describe what your project is about and what it does
+I am showing that I have carried out all lessons and now understand how to
+properly use Git and Github.
 
 ### Files used
-Include the files used
+Please have access to the relevant .csv data files.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+stackoverflow.com
+https://pandas.pydata.org/pandas-docs/stable/index.html
+https://www.udacity.com/
