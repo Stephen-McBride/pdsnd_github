@@ -235,7 +235,8 @@ def user_stats(df, city):
 
 def view_raw_data(raw_df, city):
     """Displays the raw data from the choosen bikeshare csv file every 5 rows
-    until the user quits.
+    until the user quits. Also checks to see if the remaining rows are under
+    5, if so it prints what is left.
 
     Args:
         (DataFrame) raw_df - Pandas DataFrame containing the original city data
