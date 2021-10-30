@@ -10,7 +10,11 @@ MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 
 WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
-def get_filters():
+def get_name():
+    name = input("What is your name?\n")
+    return name
+
+def get_filters(name):
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -19,11 +23,11 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello {}! Let\'s explore some US bikeshare data!'.format(name))
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input("Would you like to see data for Chicago, New York City or Washington?\n").lower()
+        city = input("Hi, would you like to see data for Chicago, New York City or Washington?\n").lower()
         if city not in ('chicago', 'new york city', 'washington'):
             print("Please enter one of the cities given\n")
         else:
@@ -264,7 +268,8 @@ def data_pause():
 
 def main():
     while True:
-        city, month, day = get_filters()
+        name = get_name()
+        city, month, day = get_filters(name)
         raw_df, df = load_data(city, month, day)
 
         time_stats(df, city)
